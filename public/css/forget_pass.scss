@@ -1,0 +1,104 @@
+@import '_variabls';
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 100px;
+    background-color: $mainColor;
+    border-bottom: 2px solid black;
+    .logo{
+        position: absolute;
+        top: 24px;
+        left: 50%;
+    }
+}
+// =========================================================================== start forget password ========================================================================
+
+.forget-container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .4);
+    .forget-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        background-color: white;
+        width: 50%;
+        height: 80%;
+        border-radius: 32px; 
+        .title{
+            margin:150px auto 30px;
+            span{
+                color: $mainColor;
+                font-family: $mainFont;
+                font-size: 24px;
+            }
+        }
+        .forget{
+            width: 60%;
+            margin:30px auto;
+            .forget-field{
+                background-color: $grayColor;
+                .label{
+                    padding: 8px;
+                    span{
+                        font-size: 16px;
+                        font-family: $mainFont;
+                        color: gray;
+                    }
+                }
+                input{
+                    width: 100%;
+                    border: none;
+                    border-bottom: 2px solid gray;
+                    border-radius: 4px;
+                    background-color:$grayColor;
+                    font-family: $mainFont;
+                    font-size: 16px;
+                    padding-left: 8px;
+                }
+            }
+            .forget-btn{
+                width: 100%;
+                padding: 8px;
+                margin: 16px 0;
+                background-color: $mainColor;
+                font-family: $mainFont;
+                font-size: 16px;
+                border: none;
+                border-radius: 8px;
+                color: white;
+                :hover{
+                    color:white;
+                    background-color: $mainColor;
+                    border: 2px solid white;
+                }
+            }
+            .test{
+                display: none;
+                background-color: rgba($color: #fa9f9f, $alpha: .1);
+                color: red;
+                padding: 4px 8px;
+                margin-top: 4px;          
+            }
+        }  
+        .notification{
+            display: none;
+            width: 60%;
+            margin:100px auto;
+            p{
+                font-family: $mainFont;
+            }
+            span{
+                color: $mainColor;
+                // font-family: $mainFont;
+                cursor: pointer;
+            }
+        } 
+    }       
+}
+

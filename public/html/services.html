@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+        <div class="container ">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="./" class="navbar-brand">Agence Urbaine</a>
+          </div>
+          <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/Accueil">Accueil</a>
+              </li>
+              <li>
+                <a href="">Documentation</a>
+              </li>
+              <li>
+                <a href="">Activités </a>
+              </li>
+              <li>
+                <a href="#">Service</a>
+              </li>
+              <li>
+                <a href="/logout">déconnexion</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+    <div>
+        <div class="space"></div>
+        <div class="departements">
+            <div class="title">
+                <span>départements<span>
+            </div>
+            <div class="depart">
+                <div class="departName">
+                    <span>selection une departement</span>
+                    <select name="departement" id="">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="departDescription" id="departDescription">
+                    <textarea name="description" id="description"  rows="10" disabled></textarea>
+                </div>
+                <div class="Question" id="Question">
+                    <span> pose votre question</span>
+                </div>
+                <div class="departQuestion" id="departQuestion">
+                    <form action="/services">
+                        <div class="input">
+                            <input id="name" type="text" placeholder="votre nom">
+                        </div>
+                        <div class="input">
+                            <input id="email" type="email" placeholder="votre email">
+                        </div>
+                        <div class="input">
+                            <input id="subject" type="text" placeholder="subject">
+                        </div>
+                        <div>
+                            <textarea id="message" rows="6" cols="50" placeholder="votre message"></textarea>
+                        </div>
+                        <div>
+                            <input id="questionBtn" type="submit" value="envoyer">
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+    <script src="../js//jquery-3.4.1.min.js"></script>
+    <script src="../js/pose_question.js"></script>
+</body>
+</html>

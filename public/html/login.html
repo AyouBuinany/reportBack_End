@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <header>
+            <div class="logo">logo</div>
+            <!-- <img src="../imgs/logo-ausy.png" alt="logo"> -->
+        </header>
+<!-- ============================================================= user login ============================================================== -->
+        <div class="login user-login">
+            <div class="container">
+                <div class="switch">
+                    <div class="user-switch-u">Utilisateur</div>
+                    <div class="user-switch-a">Admin</div>
+                </div>
+                <div class="login-body">
+                    <h2>
+                        <span>Se connecter user</span>
+                    </h2>
+                    <div class="error-note">
+                        <p>Le nom d'utilisateur et le mot de passe que vous avez entrés ne correspondent pas à 
+                            ceux présents dans nos fichiers. Veuillez vérifier et réessayer.</p>
+                    </div>
+                    <form action="/services">
+                        <div class="nom-utilisateur nom-utilisateur-u">
+                            <div class="login-field">
+                                <div class="label-nom label">
+                                    <span id="userNameL" >Téléphone, email ou CIN</span>
+                                </div>
+                                <input type="email" id="userName" >
+                            </div>
+                            <!-- <span class="test">error userName</span> -->
+                        </div>
+                        
+                        <div class="Mot-de-pass Mot-de-pass-u">
+                            <div class="login-field">
+                                <div class="label-password label">
+                                    <span id="passwordL">Mot de passe</span>
+                                </div>
+                                <input type="password" id="userPass" >
+                            </div>
+                            <!-- <div class="testP">error password</div> -->
+                        </div>
+                        
+                        <div>
+                            <input type="submit" value="Connection" class="connectinBtn">
+                        </div>
+                    </form>
+                    <div class="inscrire">
+                        <div>
+                            <a  href="/Recuperer" class="forget-pass" id="forget-pass"> Mot de passe oublié ?</a>
+                        </div>
+                        <div>
+                            <!-- <span class="sign-up" id="sign-up" onclick="signUp()">S'inscrire</span> -->
+                            <a class="sign-up" id="sign-up" href="/inscription">S'inscrire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================= end ================================================== -->
+
+<!-- ========================================================= admin login ========================================================= -->
+        <div class="login admin-login">
+            <div class="container">
+                <div class="switch">
+                    <div class="admin-switch-u">Utilisateur</div>
+                    <div class="admin-switch-a">Admin</div>
+                </div>
+                <div class="login-body">
+                    <h2>
+                        <span>Se connecter admin </span>
+                    </h2>
+                    <div class="error-note">
+                        <p>Le nom d'utilisateur et le mot de passe que vous avez entrés ne correspondent pas à 
+                            ceux présents dans nos fichiers. Veuillez vérifier et réessayer.</p>
+                    </div>
+                    <form action="/page1">
+                        <div class="nom-utilisateur">
+                            <div class="login-field">
+                                <div class="label-nom label">
+                                    <span id="userNameL" >nom d'utilisateur</span>
+                                </div>
+                                <input type="email" id="adminName" >
+                            </div>
+                            <!-- <span class="test">error userName</span> -->
+                        </div>
+                        
+                        <div class="Mot-de-pass">
+                            <div class="login-field">
+                                <div class="label-password label">
+                                    <span id="passwordL">Mot de passe</span>
+                                </div>
+                                <input type="password" id="adminPass" >
+                            </div>
+                            <!-- <div class="testP">error password</div> -->
+                        </div>
+                        
+                        <div>
+                            <input type="submit" class="connectinBtn" value="Connection">
+                        </div>
+                    </form>
+                    <div class="inscrire">
+                        <div>
+                            <span class="forget-pass"> Mot de passe oublié ?</span>
+                        </div>
+                        <div>
+                            <span class="sign-up" onclick="signUp()">S'inscrire<span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script src="../js/inscription.js"></script> -->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/validation.js"></script>
+
+    </body>
+</html>

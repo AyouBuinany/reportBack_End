@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inscription.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">logo</div>
+    </header>
+    
+<!-- ====================================================== user inscription ===================================================== -->
+    <div class="inscription-container">
+        <div class="inscription">
+            <form action="/se-connecter" method="POST">
+                <div class="title">creez voter compte <br><br></div>
+                <div class="part part1">
+                    <div class="field">
+                        <div>
+                            <span>Code d'identité National </span>
+                        </div>
+                        <input type="text" name="cin" id="cin" onfocus="myfocus()">
+                    </div>
+                    <div class="field">
+                        <div>
+                            <span>Prénom</span>
+                        </div>
+                        <input type="text" name="firstName" id="firstName" onfocus="myfocus()">
+                    </div>
+                    <div class="field">
+                        <div>
+                            <span>Nom</span>
+                        </div>
+                        <input type="text" name="lastName" id="lastName" onfocus="myfocus()">
+                    </div>
+                    <div class="next">
+                        <span id="firstNext">suivent</span>
+                    </div>
+                </div>
+            <div class="part part2">
+                    <div class="field">
+                        <div>
+                            <span>E-mail</span>
+                        </div>
+                        <input type="text" name="email" id="email" onfocus="myfocus()">
+                    </div>
+                    <div class="field">
+                        <div>
+                            <span>Confirmation E-mail</span>
+                        </div>
+                        <input type="text"  id="confEmail" onfocus="myfocus()">
+                    </div>
+                    <div class="field">
+                        <div>
+                            <span>Telephone</span>
+                        </div>
+                        <input type="text" name="phonNum" id="phonNum" onfocus="myfocus()">
+                    </div>
+                    <div class="next">
+                        <span id="secondNext">suivent</span>
+                    </div>
+                </div>
+                <div class="part part3">
+                    <div class="field">
+                        <div>
+                            <span>Mot de pass</span>
+                        </div>
+                        <input type="password" name="registrationPass" id="registrationPass" onfocus="myfocus()">
+                    </div>
+                    <div class="field">
+                        <div>
+                            <span>Confirmation mot de pass</span>
+                        </div>
+                        <input type="password" id="confPassword" onfocus="myfocus()">
+                    </div>
+                    <div class="field">
+                        <div>
+                            <span>Date de naissance</span>
+                        </div>
+                        <input type="date" name="birthday" id="birthday" onfocus="myfocus()">
+                    </div>
+                    <input type="submit" value="enregistrer" id="registerBtn">
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+   <!-- <script src="../js/inscription.js"></script> -->
+   <script src="../js/jquery-3.4.1.min.js"></script>
+   <script src="../js/validation.js"></script>
+    </body>
+</html>

@@ -200,4 +200,10 @@ select {
             flex-direction: row;
   }
 }
+#submit-inscription{
+background: rgb(11, 83, 14);
+    color: white;
+     position: initial; 
+     border-radius: 0%; 
+}
 /*# sourceMappingURL=inscription.css.map */

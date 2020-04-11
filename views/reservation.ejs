@@ -24,41 +24,41 @@
       </div>
       <div class="modal-body">
         <form action="/reservation" method="POST">
-        <div class="input-contacts">
-          <label class="input-contacts__title">Nom<span class="asterisk-red">*</span>:</label>
-          <input class="uppercased input-contacts__input" id="nom" name="nom" required type="text">
+          <div class="input-contacts">
+              <label class="input-contacts__title">ID<span class="asterisk-red">*</span>:</label>
+            <select name="id" class="uppercased input-contacts__input" id="id" required >
+              <optgroup label="ID"></optgroup>
+              <% for(var i of list){%>
+                <option><%=i.id%></option>
+                <%}%>
+            </select>
+          </div>
+          <div class="input-contacts">
+            <label class="input-contacts__title">voitures<span class="asterisk-red">*</span>:</label>
+          <select name="voiture" class="uppercased input-contacts__input" id="id" required >
+            <optgroup label="description"></optgroup>
+              <option value="Berline">Berline</option>
+              <option value="Cabriolet">Cabriolet</option>
+              <option value="Sportive">Sportive</option>
+              <option value="SUV">SUV</option>
+          </select>
         </div>
-
-        <div class="input-contacts">
-          <label class="input-contacts__title">Prénom<span class="asterisk-red">*</span>:</label>
-          <input class="uppercased input-contacts__input" id="prenom" name="prenom" required type="text">
-        </div>
-
-        <div class="input-contacts">
-          <label class="input-contacts__title">E-mail<span class="asterisk-red">*</span>:</label>
-          <input class="uppercased input-contacts__input" id="email" name="email" required type="email">
-        </div>
-
-        <div class="input-contacts">
-          <label class="input-contacts__title">Téléphone<span class="asterisk-red">*</span>:</label>
-          <input class="input-contacts__input" id="telephone" name="telephone" required type="tel">
-        </div>
-
         <div class="input-contacts">
           <label class="input-contacts__title">De<span class="asterisk-red">*</span>:</label>
-          <input class="input-contacts__input" id="date1" name="date debut" required type="date">
+          <input class="input-contacts__input" id="date1" name="dateDebut" required type="date">
         </div>
 
         <div class="input-contacts">
           <label class="input-contacts__title">Au<span class="asterisk-red">*</span>:</label>
-          <input class="input-contacts__input" id="date2" name="date fin" required type="date">
+          <input class="input-contacts__input" id="date2" name="dateFin" required type="date">
+        </div>
+        <div class="input-contacts">
+          <button class="btn" id="submit-reservation" style="  background: rgb(11, 83, 14);
+          color: white;
+           position: initial;
+           border-radius: 0%; width: 20%;" >Réserver</button>
         </div>
 </form>
-      </div>
-      <div class="modal-footer">
-        <div class="input-contacts">
-          <input class="btn-submit" id="submit-reservation" type="button" value="Réserver">
-        </div>
       </div>
     </div>
 
@@ -88,7 +88,7 @@
     <div class="nav pullUpDown">
       <a href="/galerie">GALERIE</a>
       <a href="/inscription">INSCRIPTION</a>
-      <a href="/reservation">RESERVATION</a>
+      <a href="/showReservation"> Show RESERVATION</a>
     </div>
 
     <div class="content pullUpDown">
@@ -139,7 +139,7 @@
       <article class="reservation-div-voiture reservation-voiture-sportive">
         <div class="reservation-image-sportive"></div>
         <div class="reservation-description">
-          <h3>Sportive</h3>
+          <h3 class="h3h">Sportive</h3>
           <p>
             Location vous propose la plus grande sélection de voitures sportives à la location en Europe !
             De la Ferrari 458 Italia Spider à la Porsche Carrera , en passant par la Lamborghini Aventador,
@@ -154,7 +154,7 @@
       <article class="reservation-div-voiture reservation-voiture-berline">
         <div class="reservation-image-berline"></div>
         <div class="reservation-description">
-          <h3>Berline</h3>
+          <h3 class="h3h">Berline</h3>
           <p>
             Location propose un large choix de berlines de luxe à la location. Nos berlines de prestige sont récentes et
             offrent des finitions haut de gamme. Différentes de celles proposées par les sociétés de location
@@ -167,7 +167,7 @@
       <article class="reservation-div-voiture reservation-voiture-suv">
         <div class="reservation-image-suv"></div>
         <div class="reservation-description">
-          <h3>SUV</h3>
+          <h3 class="h3h">SUV</h3>
           <p>De la Mini Cooper Cabriolet à la Mercedes Classe E Cabriolet ,
             en passant par la Porsche Boxster, Location vous propose les plus beaux
             cabriolets à la location. Nous vous offrons un choix très large de cabriolets
@@ -181,7 +181,7 @@
       <article class="reservation-div-voiture reservation-voiture-cabriolet">
         <div class="reservation-image-cabriolet"></div>
         <div class="reservation-description">
-          <h3>Cabriolet</h3>
+          <h3 class="h3h">Cabriolet</h3>
           <p>Un large choix d' SUV de luxe à la location :
             Profitez des meilleures offres du marché pour louer un 4x4 de haut de
             gamme avec Location . Spacieux, confortables, sportifs, sensationnels,
@@ -195,7 +195,7 @@
       <article class="reservation-div-voiture reservation-voiture-sportive">
         <div class="reservation-image-sportive"></div>
         <div class="reservation-description">
-          <h3>Sportive</h3>
+          <h3 class="h3h">Sportive</h3>
           <p>
             Location vous propose la plus grande sélection de voitures sportives à la
             location en Europe ! De la Ferrari 458 Italia Spider à la Porsche Carrera ,
@@ -210,7 +210,7 @@
       <article class="reservation-div-voiture reservation-voiture-berline">
         <div class="reservation-image-berline"></div>
         <div class="reservation-description">
-          <h3>Berline</h3>
+          <h3 class="h3h">Berline</h3>
           <p>
             Location propose un large choix de berlines de luxe à la location.
             Nos berlines de prestige sont récentes et offrent des finitions haut de gamme.
@@ -224,7 +224,7 @@
       <article class="reservation-div-voiture reservation-voiture-suv">
         <div class="reservation-image-suv"></div>
         <div class="reservation-description">
-          <h3>SUV</h3>
+          <h3 class="h3h">SUV</h3>
           <p>De la Mini Cooper Cabriolet à la Mercedes Classe E Cabriolet ,
             en passant par la Porsche Boxster, Location vous propose les plus beaux
             cabriolets à la location. Nous vous offrons un choix très large de cabriolets
@@ -238,7 +238,7 @@
       <article class="reservation-div-voiture reservation-voiture-cabriolet">
         <div class="reservation-image-cabriolet"></div>
         <div class="reservation-description">
-          <h3>Cabriolet</h3>
+          <h3 class="h3h">Cabriolet</h3>
           <p>Un large choix d' SUV de luxe à la location : Profitez des meilleures
             offres du marché pour louer un 4x4 de haut de gamme avec Location .
             Spacieux, confortables, sportifs, sensationnels, Location propose une
@@ -251,7 +251,7 @@
       <article class="reservation-div-voiture reservation-voiture-cabriolet">
         <div class="reservation-image-cabriolet"></div>
         <div class="reservation-description">
-          <h3>Cabriolet</h3>
+          <h3 class="h3h">Cabriolet</h3>
           <p>Un large choix d' SUV de luxe à la location : Profitez des meilleures
             offres du marché pour louer un 4x4 de haut de gamme avec Location .
             Spacieux, confortables, sportifs, sensationnels, Location propose une

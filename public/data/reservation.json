@@ -1,0 +1,9 @@
+[
+   {
+      "id": "2",
+      "reservation": 1,
+      "voiture": "Berline",
+      "dateDebut": "2020-04-15",
+      "dateFin": "2020-04-19"
+   }
+]
